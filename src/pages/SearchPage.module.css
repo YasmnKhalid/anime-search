@@ -1,0 +1,69 @@
+/* SearchPage.module.css */
+
+/* Grid container: responsive columns */
+.grid {
+    display: grid;
+    gap: 1rem; /* space between items */
+    margin-top: 1rem;
+    /* auto-fill as many min-240px columns as will fit */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  /* Card wrapper */
+  .card {
+    cursor: pointer;
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image inside card */
+  .cardImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Card content */
+  .cardContent {
+    padding: 0.75rem;
+  }
+  .cardTitle {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .cardText {
+    font-size: 0.875rem; /* 14px */
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Centered spinner & empty state */
+  .centered {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  /* existing styles… */
+
+.container {
+  max-width: 1200px;   /* or whatever max you prefer */
+  margin: 0 auto;      /* center it */
+  padding: 0 1rem;     /* 1rem (16px) left/right */
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;   /* 32px on wide displays */
+  }
+}
