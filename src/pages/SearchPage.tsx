@@ -11,6 +11,8 @@ import {
   Alert,
 } from '@mui/material';
 import styles from './SearchPage.module.css';
+import emptyStateImg from '../assets/empty-state.svg';
+
 
 export default function SearchPage() {
   const navigate = useNavigate();
@@ -78,10 +80,17 @@ export default function SearchPage() {
       )}
 
       {!loading && !error && query && results.length === 0 && (
-        <Typography align="center" sx={{ mt: 4 }}>
-          No results found.
-        </Typography>
+        <div className={styles.emptyState}>
+          <img src={emptyStateImg} alt="No results illustration" />
+          <Typography variant="h6">
+            Hmm… I couldn’t find that one.
+          </Typography>
+          <Typography variant="body2">
+            Try another title or check back later!
+          </Typography>
+        </div>
       )}
+
 
       <div className={styles.grid}>
         {results.map(a => (

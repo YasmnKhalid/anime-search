@@ -5,7 +5,7 @@
     display: grid;
     gap: 1rem; /* space between items */
     margin-top: 1rem;
-    /* auto-fill as many min-240px columns as will fit */
+   
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
   
@@ -66,4 +66,20 @@
   .container {
     padding: 0 2rem;   /* 32px on wide displays */
   }
+}
+
+/* empty-state container */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  color: #555;
+}
+
+/* the illustration */
+.emptyState img {
+  width: 100px;
+  max-width: 50%;
+  margin-bottom: 1rem;
 }
