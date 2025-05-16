@@ -1,9 +1,7 @@
-/* SearchPage.module.css */
-
 /* Grid container: responsive columns */
 .grid {
     display: grid;
-    gap: 1rem; /* space between items */
+    gap: 1rem; 
     margin-top: 1rem;
    
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -57,7 +55,7 @@
   /* existing styles… */
 
 .container {
-  max-width: 1200px;   /* or whatever max you prefer */
+  max-width: 1200px;  /* max width */
   margin: 0 auto;      /* center it */
   padding: 0 1rem;     /* 1rem (16px) left/right */
 }
