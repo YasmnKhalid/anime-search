@@ -8,7 +8,13 @@ interface Props {
 
 export default function AnimeCard({ anime, onClick }: Props) {
   return (
-    <Card onClick={onClick} sx={{ cursor: 'pointer', height: '100%' }}>
+    <Card onClick={onClick} sx={{ 
+      cursor: 'pointer',
+      height: '100%',
+      '&:hover': {
+        boxShadow: '0 8px 16px rgba(128, 0, 128, 0.6)', // purple shadow
+      },
+    }}>
       <CardMedia
         component="img"
         image={anime.images.jpg.image_url}

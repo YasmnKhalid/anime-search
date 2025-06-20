@@ -63,6 +63,9 @@ export default function DetailPage() {
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', sm: 'row' },
+          '&:hover': {
+            boxShadow: '0 8px 16px rgba(128, 0, 128, 0.6)', // purple shadow
+          },
         }}
       >
         <CardMedia

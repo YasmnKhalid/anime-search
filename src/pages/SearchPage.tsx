@@ -14,6 +14,9 @@ import styles from './SearchPage.module.css';
 import emptyStateImg from '../assets/empty-state.svg';
 
 
+
+
+
 export default function SearchPage() {
   const navigate = useNavigate();
   const [results, setResults] = useState<AnimeSummary[]>([]);
@@ -33,7 +36,7 @@ export default function SearchPage() {
         if (!query) {
           // load 6 random anime when no search term
           const randoms = await Promise.all(
-            Array.from({ length: 6 }, () =>
+            Array.from({ length: 100 }, () =>
               getRandomAnime({ signal: controller.signal })
             )
           );
@@ -64,7 +67,11 @@ export default function SearchPage() {
   }, [query, page]);
 
   return (
+    
     <div className={styles.container}>
+
+      <div className={styles.logo}>Yasminime Search</div>
+
       <SearchBar onSearch={q => { setPage(1); setQuery(q); }} />
 
       {error && (
